@@ -1,0 +1,14 @@
+lista = ["aboutyou","lines","terrified","cuatro","cinco"]
+ruta = "C:\\Users\\B09S202est\\Downloads"
+#\ secuencia de escape: \n  \t  \ --> \\
+file_name = "canciones.txt"
+file_info = ruta+"\\"+file_name
+modo= "w"
+
+for i in range(len(lista)): 
+    lista[i] += "\n"
+
+
+fp = open(file_info,modo, encoding="utf-8")
+fp.writelines(lista)
+fp.close()
